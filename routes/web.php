@@ -10,6 +10,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('webhook',function(){
+    return 'ok';
+});
+
 Route::get('/login', [UserAuthController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::get('/register', [UserAuthController::class, 'register']);
 Route::post('/register-user', [UserAuthController::class, 'registerUser']);
@@ -22,3 +26,7 @@ Route::get('/stripe', [StripeController::class, 'stripe']);
 Route::post('/stripe', [StripeController::class, 'stripePost'])->name('stripe.post')->middleware('isLoggedIn');
 Route::post('/purchase-info', [PlanController::class, 'purchaseInfo']);
 Route::get('/paymentSuccess', [PlanController::class, 'paymentSuccess'])->middleware('isLoggedIn');
+Route::get('/transaction', [PlanController::class, 'transaction']);
+Route::get('/profile', [PlanController::class, 'profile']);
+
+

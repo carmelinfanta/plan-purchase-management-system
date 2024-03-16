@@ -1,3 +1,4 @@
+<?php $count = 0; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Dashboard</title>
+    <title>Transaction Details</title>
 
 
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,19 +67,18 @@
 
     <div class="container">
         <div class="row">
-            @foreach($plans as $plan)
-            <div style="margin-top:150px;" class="col-md-4">
+            @foreach($transactions as $index => $transaction)
+            <div style="margin-top:150px;" class="col-md-5">
+                <h2>Transaction {{$index + 1}}</h2>
                 <div class="product-item">
                     <div class="down-content">
-                        <a href="#">
-                            <h4>{{$plan->plan_name}}</h4>
-                        </a>
-                        <p><b>Price: {{$plan->plan_price}}</b></p>
-                        <p>{{$plan->plan_description}}</p>
-                        <form action="{{url('checkout',$plan->id)}}" method="POST">
-                            @csrf
-                            <input type="submit" class="btn btn-primary" value="Subscribe" />
-                        </form>
+
+                        <h3>{{$transaction->name}}</h3>
+                        <h4>{{$transaction->email}}</h4>
+
+                        <p><b>Amount: ${{$transaction->price}}.00</b></p>
+                        <p>Currency: USD</p>
+                        <p>Reference Id: {{$transaction->reference_id}}</p>
                     </div>
                 </div>
             </div>

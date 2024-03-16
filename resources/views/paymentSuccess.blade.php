@@ -49,10 +49,10 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Profile</a>
+                            <a class="nav-link" href="/profile">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Transaction</a>
+                            <a class="nav-link" href="/transaction">Transaction</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-danger" href="/signout">Signout</a>
@@ -68,6 +68,7 @@
         <div class="p-5 w-100 rounded bg-white border">
             <h1 class="mb-3">Payment Successful</h1>
             <p class="mb-3">Thankyou for your payment</p>
+            <p class="mb-3">Reference Id : {{$ref_id}}</p>
             <a href="/dashboard" class="mb-3 btn btn-primary">Return to Dashboard</a>
         </div>
     </div>
