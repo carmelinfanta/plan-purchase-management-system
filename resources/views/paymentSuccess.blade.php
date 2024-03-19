@@ -22,7 +22,7 @@
 
 <body>
 
-  
+
     <div id="preloader">
         <div class="jumper">
             <div></div>
@@ -96,11 +96,12 @@
 
 
     <script language="text/Javascript">
-        cleared[0] = cleared[1] = cleared[2] = 0; 
-        function clearField(t) { 
-            if (!cleared[t.id]) { 
-                cleared[t.id] = 1; 
-                t.value = ''; 
+        cleared[0] = cleared[1] = cleared[2] = 0;
+
+        function clearField(t) {
+            if (!cleared[t.id]) {
+                cleared[t.id] = 1;
+                t.value = '';
                 t.style.color = '#fff';
             }
         }

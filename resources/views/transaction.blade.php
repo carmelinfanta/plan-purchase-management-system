@@ -20,6 +20,25 @@
     <link rel="stylesheet" href="assets/css/templatemo-sixteen.css">
     <link rel="stylesheet" href="assets/css/owl.css">
 
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -65,30 +84,40 @@
     </header>
 
 
-    <div class="container">
-        <div class="row">
-            @foreach($transactions as $index => $transaction)
-            <div style="margin-top:150px;" class="col-md-5">
-                <h2>Transaction {{$index + 1}}</h2>
-                <div class="product-item">
-                    <div class="down-content">
 
-                        <h3>{{$transaction->name}}</h3>
-                        <h4>{{$transaction->email}}</h4>
 
-                        <p><b>Amount: ${{$transaction->price}}.00</b></p>
-                        <p>Currency: USD</p>
-                        <p>Reference Id: {{$transaction->reference_id}}</p>
-                    </div>
-                </div>
-            </div>
-            @endforeach
+
+
+    <div style="padding:220px;" class="container  d-flex justify-content-center align-items-center w-100 vh-100 ">
+        <div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Amount</th>
+                    <th>Currency</th>
+                    <th>Reference Id:</th>
+                </tr>
+                @foreach($transactions as $index => $transaction)
+                <tr>
+                    <td>{{$index + 1}}</td>
+                    <td>{{$transaction->name}}</td>
+                    <td>{{$transaction->email}}</td>
+                    <td>${{$transaction->price}}.00</td>
+                    <td>USD</td>
+                    <td>{{$transaction->reference_id}}</td>
+                </tr>
+                @endforeach
+            </table>
         </div>
     </div>
 
 
 
-    <footer style="margin-top:210px; background-color:black; color: white; height:80px; display:flex;justify-content:center; align-items:center;">
+
+
+    <footer style="margin-top:90px; background-color:black; color: white; height:80px; display:flex;justify-content:center; align-items:center;">
         <div>
             <p class="text-white">&copy; 2024 SOCXO Solutions Private Limited.All rights reserved</p>
         </div>

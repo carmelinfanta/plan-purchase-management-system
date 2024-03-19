@@ -43,37 +43,11 @@ class PlanController extends Controller
         }
     }
 
-    public function purchaseInfo(Request $request)
-    {
-        if (Session::has('loginId')) {
-            $data = users::where('id', '=', Session::get('loginId'))->first();
-            $request->validate([
-                'address' => 'required',
-                'city' => 'required',
-                'country' => 'required',
-                'postalCode' => 'required',
-            ]);
-            $purchase = new PurchaseInfo();
-            $purchase->name = $data->name;
-            $purchase->email = $data->email;
-            $purchase->address = $request->address;
-            $purchase->city = $request->city;
-            $purchase->country = $request->country;
-            $purchase->postalCode = $request->postalCode;
-
-            $res = $purchase->save();
-
-            if ($res) {
-                return redirect('/stripe');
-            } else {
-                return back()->with('Something went wrong');
-            }
-        }
-    }
-
-
     public function paymentSuccess()
+
     {
+
+
         $plan = PlanAdded::all();
         $results = transaction::latest('created_at')->first();
         $ref_id = $results->reference_id;
@@ -85,7 +59,7 @@ class PlanController extends Controller
     {
         if (Session::has('loginId')) {
             $data = users::where('id', '=', Session::get('loginId'))->first();
-            $transactions = transaction::where('name', $data->name)->get();
+            $transactions = transaction::where('email', $data->email)->get();
             return view('transaction', compact('transactions'));
         }
     }
@@ -94,7 +68,7 @@ class PlanController extends Controller
     {
         if (Session::has('loginId')) {
             $data = users::where('id', '=', Session::get('loginId'))->first();
-            $transactionsNo = transaction::where('name', $data->name)->count();
+            $transactionsNo = transaction::where('email', $data->email)->count();
         }
 
         return view('profile', compact('data', 'transactionsNo'));

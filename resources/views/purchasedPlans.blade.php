@@ -88,47 +88,43 @@
       </div>
     </div>
     <div style="margin-right:120px;" class="col-sm-4 h-50 p-3 me-5 rounded bg-white border">
-      <form action="/purchase-info" method="post">
+      <form action="/checkout" method="POST">
         @csrf
         <div class="form-group mb-3">
           <label for="name">Name</label>
-          <input type="name" class="form-control" style="height:20px;" name="name" value="{{$data->name}}" disabled>
+          <input type="name" class="form-control"  name="name" value="{{$data->name}}" disabled>
 
         </div>
         <div class="form-group mb-3">
           <label for="email">Email</label>
-          <input type="email" class="form-control" style="height:20px;" name="email" value="{{$data->email}}" disabled>
+          <input type="email" class="form-control"  name="email" value="{{$data->email}}" disabled>
         </div>
         <div class="form-group mb-3">
           <label for="address" style="height:30px;">Address</label>
-          <textarea type="address" class="form-control" style="height:50px;" name="address" value="{{old('address')}}"></textarea>
+          <textarea type="address" class="form-control"  name="address" value="{{old('address')}}"></textarea>
           <span class="text-danger">@error('address'){{$message}} @enderror</span>
 
         </div>
         <div class="form-group mb-3">
           <label for="city" style="height:20px;">City</label>
-          <input type="city" class="form-control" style="height:20px;" name="city" value="{{old('city')}}">
+          <input type="city" class="form-control" name="city" value="{{old('city')}}">
           <span class="text-danger">@error('city'){{$message}} @enderror</span>
 
         </div>
         <div class="form-group mb-3">
-          <label for="country" style="height:20px;">Country</label>
-          <input type="country" class="form-control" style="height:20px;" name="country" value="{{old('country')}}">
+          <label for="country" >Country</label>
+          <input type="country" class="form-control"  name="country" value="{{old('country')}}">
           <span class="text-danger">@error('country'){{$message}} @enderror</span>
 
         </div>
         <div class="form-group mb-3">
-          <label for="postalCode" style="height:20px;">Postal Code</label>
-          <input type="postalCode" class="form-control" style="height:20px;" name="postalCode" value="{{old('postalCode')}}">
+          <label for="postalCode" >Postal Code</label>
+          <input type="postalCode" class="form-control"  name="postalCode" value="{{old('postalCode')}}">
           <span class="text-danger">@error('postalCode'){{$message}} @enderror</span>
 
         </div>
 
-
-
-        <div class="form-group mb-3">
-          <button class="btn btn-primary" type="submit">Submit Payment</button>
-        </div>
+        <button class="btn btn-primary" type="submit">Submit Payment</button>
       </form>
     </div>
   </div>
@@ -163,6 +159,11 @@
       }
     }
   </script>
+
+  <script>
+
+  </script>
+
 
 
 </body>

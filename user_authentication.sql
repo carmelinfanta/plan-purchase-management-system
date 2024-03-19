@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Mar 16, 2024 at 12:30 PM
+-- Generation Time: Mar 19, 2024 at 01:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -193,7 +193,27 @@ INSERT INTO `purchase_infos` (`id`, `name`, `email`, `address`, `city`, `country
 (6, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 04:27:18', '2024-03-16 04:27:18'),
 (7, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 04:33:51', '2024-03-16 04:33:51'),
 (8, 'Joshua', 'joshua@gmail.com', 'test address', 'city', 'country', '628002', '2024-03-16 05:10:26', '2024-03-16 05:10:26'),
-(9, 'Joshua', 'joshua@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 05:20:26', '2024-03-16 05:20:26');
+(9, 'Joshua', 'joshua@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 05:20:26', '2024-03-16 05:20:26'),
+(10, 'Joshua', 'joshua@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 12:34:43', '2024-03-16 12:34:43'),
+(11, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 12:42:50', '2024-03-16 12:42:50'),
+(12, 'Joshua', 'joshua@gmail.com', 'test', 'city', 'country', '628002', '2024-03-16 13:15:21', '2024-03-16 13:15:21'),
+(13, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 'tuty', 'city', 'country', '628002', '2024-03-18 06:38:49', '2024-03-18 06:38:49'),
+(14, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 'tuty', 'city', 'country', '628002', '2024-03-18 06:40:17', '2024-03-18 06:40:17'),
+(15, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 17:24:39', '2024-03-18 17:24:39'),
+(16, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 17:26:02', '2024-03-18 17:26:02'),
+(17, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 17:40:39', '2024-03-18 17:40:39'),
+(18, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 17:47:13', '2024-03-18 17:47:13'),
+(19, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 17:50:27', '2024-03-18 17:50:27'),
+(20, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 17:51:31', '2024-03-18 17:51:31'),
+(21, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 18:01:13', '2024-03-18 18:01:13'),
+(22, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 18:08:38', '2024-03-18 18:08:38'),
+(23, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 18:09:19', '2024-03-18 18:09:19'),
+(24, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 18:09:55', '2024-03-18 18:09:55'),
+(25, 'bevin', 'bevin@gmail.com', 'test\r\ntest', 'test', 'Germany', '623546', '2024-03-18 18:18:31', '2024-03-18 18:18:31'),
+(26, 'test user', 'test@gmail.com', 'test address', 'test city', 'test country', 'test code', '2024-03-18 19:08:59', '2024-03-18 19:08:59'),
+(27, 'test user', 'test@gmail.com', 'test address', 'new city', 'new country', '735673', '2024-03-18 19:10:11', '2024-03-18 19:10:11'),
+(28, 'test user', 'test@gmail.com', 'test', 'test', 'Germany', '623546', '2024-03-18 19:16:06', '2024-03-18 19:16:06'),
+(29, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 'test', 'test', 'Germany', '623546', '2024-03-18 19:20:38', '2024-03-18 19:20:38');
 
 -- --------------------------------------------------------
 
@@ -216,12 +236,10 @@ CREATE TABLE `transactions` (
 --
 
 INSERT INTO `transactions` (`id`, `name`, `email`, `price`, `reference_id`, `created_at`, `updated_at`) VALUES
-(1, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 10, 'HqEocvwKiY2zMXGerDivWOv8snqqdYbmfc9ZPOJr', '2024-03-16 02:58:01', '2024-03-16 02:58:01'),
-(2, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 20, 'HqEocvwKiY2zMXGerDivWOv8snqqdYbmfc9ZPOJr', '2024-03-16 03:18:21', '2024-03-16 03:18:21'),
-(3, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 10, 'HqEocvwKiY2zMXGerDivWOv8snqqdYbmfc9ZPOJr', '2024-03-16 04:27:51', '2024-03-16 04:27:51'),
-(4, 'Carmel Infanta', 'carmelinfanta97@gmail.com', 10, 'HqEocvwKiY2zMXGerDivWOv8snqqdYbmfc9ZPOJr', '2024-03-16 04:34:17', '2024-03-16 04:34:17'),
-(5, 'Joshua', 'joshua@gmail.com', 10, 'tok_1OuufUSAfFhqfzubHbODBsZd', '2024-03-16 05:10:50', '2024-03-16 05:10:50'),
-(6, 'Joshua', 'joshua@gmail.com', 20, 'tok_1Ouup5SAfFhqfzubawBb8nj0', '2024-03-16 05:20:46', '2024-03-16 05:20:46');
+(17, 'test', 'bevin@gmail.com', 3000, 'pi_3OvpvQSAfFhqfzub1fEQ2MSF', '2024-03-18 18:19:12', '2024-03-18 18:19:12'),
+(18, 'test', 'test@gmail.com', 1000, 'pi_3OvqlMSAfFhqfzub0QGF37Fv', '2024-03-18 19:12:51', '2024-03-18 19:12:51'),
+(19, 'test', 'test@gmail.com', 1000, 'pi_3OvqqtSAfFhqfzub1cPAmeqG', '2024-03-18 19:18:35', '2024-03-18 19:18:35'),
+(20, 'Carmel', 'carmelinfanta97@gmail.com', 30, 'pi_3OvqthSAfFhqfzub1qx49NHM', '2024-03-18 19:21:29', '2024-03-18 19:21:29');
 
 -- --------------------------------------------------------
 
@@ -244,7 +262,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
 (1, 'Carmel Infanta', 'carmelinfanta97@gmail.com', '$2y$12$JWQIVqFN5nPBnE21CdrssulXUeYKfOxbLzjiduQs8eUgCV8oMgGLu', '2024-03-15 23:28:08', '2024-03-15 23:28:08'),
-(2, 'Joshua', 'joshua@gmail.com', '$2y$12$qzVrmhLtIhz6xlUCV95An.c1uFs5tFrkiccsq43wcvUV0KA6UndGW', '2024-03-16 05:09:55', '2024-03-16 05:09:55');
+(2, 'Joshua', 'joshua@gmail.com', '$2y$12$qzVrmhLtIhz6xlUCV95An.c1uFs5tFrkiccsq43wcvUV0KA6UndGW', '2024-03-16 05:09:55', '2024-03-16 05:09:55'),
+(3, 'bevin', 'bevin@gmail.com', '$2y$12$rG7yzpsJ5kMlnJEZ3v5SLuHaTS65vfVj9FLujBrZPlrzYvNcgP5eW', '2024-03-18 12:18:29', '2024-03-18 12:18:29'),
+(4, 'test user', 'test@gmail.com', '$2y$12$KcDvpoE786EF7R3G7fht7.MFoPLV2OreteCmLLzsKWzxy.d50S6xO', '2024-03-18 19:05:35', '2024-03-18 19:05:35');
 
 --
 -- Indexes for dumped tables
@@ -351,25 +371,25 @@ ALTER TABLE `plans`
 -- AUTO_INCREMENT for table `plan_addeds`
 --
 ALTER TABLE `plan_addeds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 
 --
 -- AUTO_INCREMENT for table `purchase_infos`
 --
 ALTER TABLE `purchase_infos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
